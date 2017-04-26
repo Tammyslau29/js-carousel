@@ -1,0 +1,70 @@
+@mixin indicatorContainer {
+  width:100%;
+  .indicatorPhoto {
+    width:19.6%;
+    display: inline-block;
+  }
+  .activeIndicator {
+    border: 5px solid goldenrod;
+  }
+}
+@mixin photoDisplay{
+  .displayContainer {
+    position: relative;
+    .titleContainer{
+      font-family: 'Open Sans Condensed', sans-serif;
+      text-align: center;
+    }
+    .imageContainer{
+      width: 100%;
+    }
+    .descriptionContainer{
+      @extend .titleContainer;
+      background-color: rgba(0, 0, 0, 0.68);
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      bottom: 0;
+      @media screen and (max-width: 480px) {
+        font-size:60px;
+      }
+    }
+    &.active {
+      display: inline-block;
+    }
+    display: none;
+  }
+}
+@mixin arrow{
+  border:none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.49);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+body{
+  .carouselBody{
+    position: relative;
+    .imageControls{
+      .rightArrow{
+        @include arrow;
+        right:10px;
+      }
+      .leftArrow{
+        @include arrow;
+        left: 10px;
+      }
+    }
+    .displayBody{
+      height:85%;
+      @include photoDisplay
+    }
+    .indicatorContainer{
+      @include indicatorContainer;
+    }
+  }
+}
+
+

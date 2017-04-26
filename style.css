@@ -1,0 +1,50 @@
+body .carouselBody {
+  position: relative; }
+  body .carouselBody .imageControls .rightArrow {
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.49);
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    right: 10px; }
+  body .carouselBody .imageControls .leftArrow {
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.49);
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    left: 10px; }
+  body .carouselBody .displayBody {
+    height: 85%; }
+    body .carouselBody .displayBody .displayContainer {
+      position: relative;
+      display: none; }
+      body .carouselBody .displayBody .displayContainer .titleContainer, body .carouselBody .displayBody .displayContainer .descriptionContainer {
+        font-family: 'Open Sans Condensed', sans-serif;
+        text-align: center; }
+      body .carouselBody .displayBody .displayContainer .imageContainer {
+        width: 100%; }
+      body .carouselBody .displayBody .displayContainer .descriptionContainer {
+        background-color: rgba(0, 0, 0, 0.68);
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        bottom: 0; }
+        @media screen and (max-width: 480px) {
+          body .carouselBody .displayBody .displayContainer .descriptionContainer {
+            font-size: 60px; } }
+      body .carouselBody .displayBody .displayContainer.active {
+        display: inline-block; }
+  body .carouselBody .indicatorContainer {
+    width: 100%; }
+    body .carouselBody .indicatorContainer .indicatorPhoto {
+      width: 19.6%;
+      display: inline-block; }
+    body .carouselBody .indicatorContainer .activeIndicator {
+      border: 5px solid goldenrod; }
+
+/*# sourceMappingURL=style.css.map */
